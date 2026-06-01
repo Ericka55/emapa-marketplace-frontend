@@ -1,0 +1,14 @@
+:root {
+  --emapa-primary: #1565C0;
+  --emapa-dark: #0D47A1;
+  --emapa-accent: #FBC02D;
+  --emapa-bg: #F5F7FA;
+  --emapa-text: #1A1A1A;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--emapa-bg);
+  color: var(--emapa-text);
+}
