@@ -33,7 +33,15 @@ tipo: "COMPRADOR",
         e.preventDefault();
 
         try {
-            await api.post("/auth/register", form);
+            await api.post("/auth/register", {
+    nombre: form.nombre,
+    apellido: form.apellido,
+    email: form.email,
+    password: form.password,
+    telefono: form.telefono,
+    tipo: form.tipo,
+    motivo: form.motivo
+});
 
             if (form.tipo === "VENDEDOR") {
                 alert("Solicitud enviada. Un administrador la revisará.");
