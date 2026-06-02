@@ -11,7 +11,7 @@ export default function Register() {
         email: "",
         password: "",
         telefono: "",
-rol: data.tipo,
+tipo: "COMPRADOR",
         // negocio
         negocio: "",
         descripcionNegocio: "",
@@ -77,7 +77,7 @@ rol: data.tipo,
                 <input name="telefono" placeholder="Teléfono" onChange={handleChange} />
                 <input name="password" type="password" placeholder="Contraseña" onChange={handleChange} />
 
-                <select name="rol" onChange={handleChange}>
+                <select name="tipo" onChange={handleChange}>
   <option value="COMPRADOR">Soy comprador</option>
   <option value="VENDEDOR">Quiero ser vendedor</option>
 </select>
