@@ -15,7 +15,7 @@ export default function ProductDetail() {
     useEffect(() => {
         cargarProducto();
         cargarResenas();
-    }, []);
+    }, [id]);
 
     const cargarProducto = async () => {
         const res = await api.get(`/productos/detalle/${id}`);
@@ -126,8 +126,8 @@ const [imagenActiva, setImagenActiva] = useState(0);
                 <div>
 
                     <img
-                        src={getImageUrl(img.urlImagen)}
-                        alt={producto.nombre}
+                        src={getImageUrl(producto.imagenes?.[0]?.urlImagen)}
+  alt={producto.nombre}
                         style={{
                             width: "100%",
                             height: "500px",
